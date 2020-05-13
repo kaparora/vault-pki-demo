@@ -1,8 +1,9 @@
 #!/bin/sh
 set -o xtrace
 #stop and remove vault containers if running
-docker stop vault-demo-vault www.example.com 
-docker rm vault-demo-vault www.example.com
+docker stop vault-demo-vault test.example.com 
+docker rm vault-demo-vault test.example.com
+
 #delete all generated files
 rm pki-ca-root.json
 rm ca.pem

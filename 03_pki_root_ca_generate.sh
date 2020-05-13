@@ -12,7 +12,7 @@ vault secrets tune -max-lease-ttl=87600h pki
 
 #generate root CA
 vault write -format=json pki/root/generate/internal \
-common_name="example.com" ttl=87600h  > pki-ca-root.json
+common_name="example.com" ttl=8760h  > pki-ca-root.json
 
 #save the certificate in a sepearate file, we will add it later as trusted to our browser/computer
 cat pki-ca-root.json | jq -r .data.certificate > ca.pem
