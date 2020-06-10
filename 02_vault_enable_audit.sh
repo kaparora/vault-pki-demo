@@ -8,6 +8,9 @@ vault login root
 #check the status of Vault server
 vault status
 
+## allow the vault process to write in /var/log
+docker exec -it vault-demo-vault chmod 777 /var/log
+
 #enable Audit and write logs to a file
 vault audit enable file file_path=/var/log/vault_audit.log
 #enable another Audit and log to another file but with raw data
